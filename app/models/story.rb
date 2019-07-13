@@ -368,7 +368,7 @@ class Story < ActiveRecord::Base
   end
 
   def html_class_for_user
-    c = []
+    c = ["user"]
     if !self.user.is_active?
       c.push "inactive_user"
     elsif self.user.is_new?
@@ -377,7 +377,7 @@ class Story < ActiveRecord::Base
       c.push "user_is_author"
     end
 
-    c.join("")
+    c.join(" ")
   end
 
   def is_downvotable?

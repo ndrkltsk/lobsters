@@ -607,6 +607,10 @@ li .byline a.comment_replier {
 	-ms-user-select: none;
 	user-select: none;
 }
+span.user, a.user,
+li .byline a.user {
+	font-size:14px;
+}
 span.new_user, a.new_user,
 li .byline a.new_user {
 	color: green;

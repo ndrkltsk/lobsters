@@ -37,14 +37,9 @@ module ApplicationHelper
     return @header_links if @header_links
 
     @header_links = {
-      "/" => { :title => @cur_url == "/" ? Rails.application.name : t('.homelink') },
       "/recent" => { :title => t('.recentlink') },
       "/comments" => { :title => t('.commentslink') },
     }
-
-    if @user
-      @header_links.merge!({ "/threads" => { :title => t('.yourthreadslink') } })
-    end
 
     if @user && @user.can_submit_stories?
       @header_links.merge!({

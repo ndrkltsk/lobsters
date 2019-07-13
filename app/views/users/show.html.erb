@@ -16,11 +16,11 @@
 <div class="box wide">
   <div class="legend">
     <% if !@showing_user.is_active? %>
-      <span class="inactive_user">
+      <span class="inactive_user user">
     <% elsif @showing_user.is_new? %>
-      <span class="new_user">
+      <span class="new_user user">
     <% else %>
-      <span>
+      <span class="user">
     <% end %>
       <%= @showing_user.username %>
     </span>
